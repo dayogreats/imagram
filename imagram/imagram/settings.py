@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-udky_a!1**vmwdy03b(l1b@axkw$lurb^ozg^xqkv08=+i8wym
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'posts.apps.PostsConfig',
+    # 'polls.apps.PollsAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -116,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_URL = 'media'
+MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

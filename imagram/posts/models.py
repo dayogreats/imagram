@@ -6,17 +6,17 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     image = models.ImageField()
-    description = models.TextChoices()
+    description = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created =models.DateTimeField(auto_now_add=True)
     created =models.DateTimeField(auto_now=True)
     
 
-    def __str__(self):
-        return 
+    # def __str__(self):
+    #     return self
 
-    def __unicode__(self):
-        return 
+    # def __unicode__(self):
+    #     return 
 
 
 class Comment(models.Model):
@@ -27,10 +27,10 @@ class Comment(models.Model):
     created =models.DateTimeField(auto_now=True)
     
 
-    def __str__(self):
-        return 
+    # def __str__(self):
+    #     return self
 
-    def __unicode__(self):
-        return 
+    # def __unicode__(self):
+    #     return 
 
 
